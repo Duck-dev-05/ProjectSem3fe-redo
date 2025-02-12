@@ -1,0 +1,162 @@
+.main-content {
+  padding: 20px;
+}
+
+.hero {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.search-input {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.category-item {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #e65c00;
+}
+
+/* Trending Section */
+.trending {
+  padding: 40px 20px;
+  background-color: #fff;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.trending h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.trending-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.trending-item {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.trending-item:hover {
+  background-color: #e65c00;
+}
+
+/* Trending item images */
+.trending-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Latest Recipes Section */
+.latest {
+  padding: 40px 20px;
+  background-color: #fefefe;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.latest h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.latest-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.latest-item {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 200px;
+}
+
+.latest-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.latest-item:hover {
+  background-color: #e65c00;
+} 
