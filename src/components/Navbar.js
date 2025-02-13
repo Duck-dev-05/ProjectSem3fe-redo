@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prevMenuOpen => !prevMenuOpen); // Menu toggle remains; note that the ingredient page link has been added in the navbar links below.
+  };
+
   return (
     <nav className="navbar">
-      <div className="navbar-logo">JamesThew.com</div>
-      <ul className="navbar-links">
-        <li><a href="#">Dinners</a></li>
-        <li><a href="#">Meals</a></li>
-        <li><a href="#">Ingredients</a></li>
-        <li><a href="#">Occasions</a></li>
-        <li><a href="#">Cuisines</a></li>
-        <li><a href="#">Kitchen Tips</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">About</a></li>
+      <div className="navbar-logo">
+        <Link to="/" className="logo-text">
+          JamesThew.com
+        </Link>
+      </div>
+      <div className="menu-icon" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+        <li><Link to="/dinners">Dinners</Link></li>
+        <li><Link to="/meals">Meals</Link></li>
+        <li><Link to="/Ingredients">Ingredients</Link></li>
+        <li><Link to="/">Occasions</Link></li>
+        <li><Link to="/">Cuisines</Link></li>
+        <li><Link to="/">Kitchen Tips</Link></li>
+        <li><Link to="/">News</Link></li>
+        <li><Link to="/">Features</Link></li>
+        <li><Link to="/">About</Link></li>
       </ul>
+      <div className="auth-links">
+        <Link to="/signin" className="signin">Sign In</Link>
+        <Link to="/register" className="register">Register</Link>
+      </div>
     </nav>
   );
 }

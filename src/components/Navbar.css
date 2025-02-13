@@ -5,6 +5,7 @@
   background-color: #fff;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 .navbar-logo {
@@ -13,6 +14,14 @@
   color: #333;
 }
 
+.navbar-logo .logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Desktop Nav */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -27,4 +36,75 @@
 
 .navbar-links li a:hover {
   color: #ff6600;
+}
+
+/* Auth Links */
+.auth-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.auth-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #ff6600;
+  border-color: #ff6600;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive Mobile Nav */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+  
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    display: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-links.active {
+    display: flex;
+  }
+  
+  .navbar-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Mobile Auth Links */
+  .auth-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 } 
