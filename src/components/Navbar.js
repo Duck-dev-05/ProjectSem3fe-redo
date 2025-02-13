@@ -22,15 +22,15 @@ function Navbar() {
         <div className="bar"></div>
       </div>
       <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+        <li><Link to="/about">About</Link></li>
         <li><Link to="/dinners">Dinners</Link></li>
         <li><Link to="/meals">Meals</Link></li>
         <li><Link to="/Ingredients">Ingredients</Link></li>
-        <li><Link to="/">Occasions</Link></li>
-        <li><Link to="/">Cuisines</Link></li>
-        <li><Link to="/">Kitchen Tips</Link></li>
-        <li><Link to="/">News</Link></li>
-        <li><Link to="/">Features</Link></li>
-        <li><Link to="/">About</Link></li>
+        <li><Link to="/occasions">Occasions</Link></li>
+        <li><Link to="/Cuisines">Cuisines</Link></li>
+        <li><Link to="/KitchenTips">Kitchen Tips</Link></li>
+        <li><Link to="/news">News</Link></li>
+        <li><Link to="/features">Features</Link></li>
       </ul>
       <div className="auth-links">
         <Link to="/signin" className="signin">Sign In</Link>

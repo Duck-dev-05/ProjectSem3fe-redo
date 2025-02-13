@@ -1,0 +1,57 @@
+.kitchen-tips-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .kitchen-tips-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .tip-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .tip-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .tip-card h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+  }
+  
+  .tip-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .tip-card a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .tip-card a:hover {
+    text-decoration: underline;
+  }
