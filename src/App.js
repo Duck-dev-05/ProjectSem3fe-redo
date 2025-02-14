@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
 import KitchenTips from './components/KitchenTips';
+import News from './pages/News';
 // ErrorBoundary component to catch errors in the tree.
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -67,6 +68,7 @@ function App() {
           <Route path="/KitchenTips" element={<KitchenTips />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/news" element={<News />} />
         </Routes>
         <Footer />
       </Router>
