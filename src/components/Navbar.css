@@ -1,110 +1,172 @@
-.navbar {
+.nav-header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.utility-bar {
+  background: #f8f8f8;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
-}
-
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.navbar-logo .logo-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-
-/* Desktop Nav */
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.navbar-links li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.navbar-links li a:hover {
-  color: #ff6600;
-}
-
-/* Auth Links */
-.auth-links {
-  display: flex;
-  gap: 15px;
   align-items: center;
+}
+
+.utility-links a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 .auth-links a {
+  color: #666;
   text-decoration: none;
+}
+
+.divider {
+  margin: 0 10px;
+  color: #ddd;
+}
+
+.main-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #E33D26;
+  text-decoration: none;
+}
+
+.main-nav {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-button {
+  display: block;
+  padding: 15px 20px;
   color: #333;
+  text-decoration: none;
   font-weight: 500;
-  border: 1px solid transparent;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
-.auth-links a:hover {
-  color: #ff6600;
-  border-color: #ff6600;
+.menu-item:hover .menu-button {
+  color: #E33D26;
 }
 
-/* Hamburger Menu Icon */
-.menu-icon {
+.submenu {
   display: none;
-  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background: #f8f8f8;
+  color: #E33D26;
+}
+
+.view-all {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 8px;
+  padding-top: 8px;
+  font-weight: 500;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-button {
+  background: none;
+  border: none;
+  color: #666;
   cursor: pointer;
+  font-size: inherit;
+  padding: 0;
 }
 
-.menu-icon .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
 }
 
-/* Responsive Mobile Nav */
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+
+.user-dropdown a {
+  display: block;
+  padding: 8px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.user-dropdown a:hover {
+  background: #f8f8f8;
+  color: #E33D26;
+}
+
 @media (max-width: 768px) {
-  .menu-icon {
-    display: flex;
-  }
-  
-  .navbar-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
+  .nav-menu {
     flex-direction: column;
-    background-color: #fff;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    padding: 0 12px;
+  }
+
+  .utility-bar {
     display: none;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-links.active {
-    display: flex;
-  }
-  
-  .navbar-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  /* Mobile Auth Links */
-  .auth-links {
-    flex-direction: column;
-    margin-top: 10px;
   }
 } 
