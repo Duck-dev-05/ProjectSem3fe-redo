@@ -1,0 +1,182 @@
+.newsletter-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.newsletter-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.newsletter-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.newsletter-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.newsletter-form {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.email-input-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.email-input-section input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.email-input-section input:focus {
+  border-color: #E33D26;
+  outline: none;
+}
+
+.email-input-section button {
+  padding: 1rem 2rem;
+  background: #E33D26;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.email-input-section button:hover {
+  background: #d62d16;
+}
+
+.newsletter-options {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.newsletter-option {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.newsletter-option:hover {
+  border-color: #E33D26;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.option-image {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.option-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.option-content {
+  flex: 1;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.checkbox-custom {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .checkbox-custom {
+  background: #E33D26;
+  border-color: #E33D26;
+}
+
+input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.option-text h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.option-text p {
+  color: #666;
+  line-height: 1.4;
+}
+
+.newsletter-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.newsletter-footer a {
+  color: #E33D26;
+  text-decoration: none;
+}
+
+.newsletter-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .newsletter-container {
+    padding: 1rem;
+  }
+
+  .newsletter-header h1 {
+    font-size: 2rem;
+  }
+
+  .email-input-section {
+    flex-direction: column;
+  }
+
+  .newsletter-option {
+    flex-direction: column;
+  }
+
+  .option-image {
+    width: 100%;
+    height: 160px;
+  }
+} 

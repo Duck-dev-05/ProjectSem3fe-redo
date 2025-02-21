@@ -1,40 +1,78 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './News.css';
 
 const News = () => {
-  const [articles, setArticles] = useState([]);
+    const newsCategories = [
+        {
+            category: "Celebrity & Entertainment",
+            articles: [
+                {
+                    id: 1,
+                    title: "Celebrity Chef's New Restaurant Opening",
+                    image: "/images/news/celebrity-chef.jpg",
+                    excerpt: "Famous chef announces new dining concept...",
+                    date: "March 15, 2024"
+                },
+                // More articles...
+            ]
+        },
+        {
+            category: "Fast Food",
+            articles: [
+                {
+                    id: 2,
+                    title: "Popular Chain Introduces New Menu Items",
+                    image: "/images/news/fast-food.jpg",
+                    excerpt: "New seasonal offerings hit stores nationwide...",
+                    date: "March 14, 2024"
+                },
+                // More articles...
+            ]
+        },
+        {
+            category: "Grocery",
+            articles: [
+                {
+                    id: 3,
+                    title: "Major Supermarket Chain Expands Organic Section",
+                    image: "/images/news/grocery.jpg",
+                    excerpt: "New organic products added to shelves...",
+                    date: "March 13, 2024"
+                },
+                // More articles...
+            ]
+        }
+    ];
 
-  useEffect(() => {
-    // Replace with your actual news API endpoint
-    axios.get('https://api.example.com/news')
-      .then(response => {
-        setArticles(response.data.articles);
-      })
-      .catch(error => {
-        console.error('Error fetching the news data:', error);
-      });
-  }, []);
+    return (
+        <div className="news-container">
+            <header className="news-header">
+                <h1>Food News</h1>
+                <p>Stay up to date with the latest food trends and industry news</p>
+            </header>
 
-  return (
-    <div>
-      <h1>News Page</h1>
-      {articles.length === 0 ? (
-        <p>Loading news...</p>
-      ) : (
-        <ul>
-          {articles.map(article => (
-            <li key={article.id}>
-              <h2>{article.title}</h2>
-              <p>{article.summary}</p>
-              <a href={article.url} target="_blank" rel="noopener noreferrer">
-                Read More
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+            {newsCategories.map((category, index) => (
+                <section key={index} className="news-category">
+                    <h2>{category.category}</h2>
+                    <div className="articles-grid">
+                        {category.articles.map(article => (
+                            <Link to={`/news/${article.id}`} key={article.id} className="article-card">
+                                <div className="article-image">
+                                    <img src={article.image} alt={article.title} />
+                                </div>
+                                <div className="article-content">
+                                    <h3>{article.title}</h3>
+                                    <p>{article.excerpt}</p>
+                                    <span className="article-date">{article.date}</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+            ))}
+        </div>
+    );
 };
 
 export default News; 

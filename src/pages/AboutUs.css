@@ -1,0 +1,166 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.mission-section {
+    background: #f9f9f9;
+    padding: 3rem;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+
+.mission-section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.mission-section p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.mission-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.feature-icon {
+    color: #E33D26;
+    font-size: 1.2rem;
+}
+
+.join-section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.join-section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.join-section p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.join-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.join-button {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.join-button.primary {
+    background-color: #E33D26;
+    color: white;
+}
+
+.join-button.primary:hover {
+    background-color: #c62d1f;
+}
+
+.join-button.secondary {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.join-button.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .about-main {
+        grid-template-columns: 1fr;
+    }
+
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .mission-section {
+        padding: 2rem;
+    }
+
+    .join-buttons {
+        flex-direction: column;
+    }
+
+    .join-button {
+        width: 100%;
+        text-align: center;
+    }
+} 

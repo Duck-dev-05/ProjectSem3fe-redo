@@ -1,0 +1,1 @@
+// Similar structure as above, with cooking basics content 

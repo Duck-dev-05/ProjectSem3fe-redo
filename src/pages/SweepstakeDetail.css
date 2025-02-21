@@ -1,0 +1,237 @@
+.sweepstake-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.sweepstake-detail-header {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #E33D26;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.sweepstake-detail-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.end-date {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.sweepstake-detail-content {
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+
+.prize-section {
+  padding: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.prize-section h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.prize-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.prize-value {
+  font-size: 1.25rem;
+  color: #E33D26;
+  font-weight: 600;
+}
+
+.entry-info {
+  display: flex;
+  gap: 2rem;
+  color: #666;
+}
+
+.entry-form {
+  padding: 2rem;
+}
+
+.entry-form h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  border-color: #E33D26;
+  outline: none;
+}
+
+.checkbox-section {
+  margin-bottom: 2rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.25rem;
+}
+
+.checkbox-group label {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.checkbox-group.required label {
+  font-weight: 500;
+}
+
+.checkbox-group a {
+  color: #E33D26;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #E33D26;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #d62d16;
+}
+
+.rules-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.rules-section h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.rules-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.rules-section li {
+  color: #666;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.rules-section li::before {
+  content: "•";
+  color: #E33D26;
+  position: absolute;
+  left: 0;
+}
+
+.full-rules-link {
+  color: #E33D26;
+  text-decoration: none;
+}
+
+.full-rules-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .sweepstake-detail-container {
+    padding: 1rem;
+  }
+
+  .sweepstake-detail-header h1 {
+    font-size: 2rem;
+  }
+
+  .prize-section,
+  .entry-form {
+    padding: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prize-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entry-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+} 

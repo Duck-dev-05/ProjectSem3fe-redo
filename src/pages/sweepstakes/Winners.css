@@ -1,0 +1,170 @@
+.winners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.winners-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.back-link {
+  color: #E33D26;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.winners-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.winners-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.winners-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.contest-winners {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.contest-header h2 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.contest-date {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.winners-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.winner-card {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.winner-card:hover {
+  transform: translateY(-2px);
+}
+
+.winner-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #E33D26;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.winner-info h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.winner-location {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.prize-won {
+  color: #333;
+  font-weight: 500;
+}
+
+.winners-footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.current-opportunities h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.current-opportunities p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.view-sweepstakes-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #E33D26;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.view-sweepstakes-button:hover {
+  background: #d62d16;
+}
+
+@media (max-width: 768px) {
+  .winners-container {
+    padding: 1rem;
+  }
+
+  .winners-header h1 {
+    font-size: 2rem;
+  }
+
+  .contest-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .winner-card {
+    padding: 1rem;
+  }
+
+  .winner-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+} 

@@ -1,0 +1,166 @@
+.sweepstakes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.sweepstakes-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sweepstakes-header h1 {
+  font-size: 2.25rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.sweepstakes-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.sweepstakes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sweepstake-card {
+  background: white;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+
+.sweepstake-card h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  min-height: 4.2rem;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.sweepstake-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: #666;
+  font-size: 1rem;
+}
+
+.value {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.enter-button {
+  display: block;
+  width: 100%;
+  padding: 0.875rem;
+  background: #E33D26;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+.enter-button:hover {
+  background: #d62d16;
+  text-decoration: none;
+  color: white;
+}
+
+.sweepstakes-footer {
+  display: flex;
+  gap: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  color: #E33D26;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .sweepstakes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sweepstakes-container {
+    padding: 1rem;
+  }
+
+  .sweepstakes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sweepstake-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .sweepstake-card h2 {
+    font-size: 1.5rem;
+    min-height: auto;
+  }
+
+  .sweepstakes-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+} 

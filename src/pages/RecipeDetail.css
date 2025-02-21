@@ -1,0 +1,16 @@
+.recipe-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.recipe-detail-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.recipe-detail-container p {
+  color: #666;
+  line-height: 1.6;
+} 

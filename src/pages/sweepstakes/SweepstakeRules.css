@@ -1,0 +1,132 @@
+.rules-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.rules-header {
+  margin-bottom: 2.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #E33D26;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.rules-header h1 {
+  font-size: 2.25rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.rules-content {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+}
+
+.rules-section {
+  margin-bottom: 3rem;
+}
+
+.rules-section:last-child {
+  margin-bottom: 0;
+}
+
+.rules-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.section-content {
+  color: #666;
+  line-height: 1.6;
+}
+
+.section-content h3 {
+  color: #333;
+  font-size: 1.25rem;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.section-content h3:first-child {
+  margin-top: 0;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+}
+
+.section-content ul {
+  margin: 0 0 1rem 1.5rem;
+}
+
+.section-content li {
+  margin-bottom: 0.5rem;
+}
+
+.prizes-list {
+  margin: 1.5rem 0;
+}
+
+.prize-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+}
+
+.prize-item h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.prize-item p {
+  margin-bottom: 0.5rem;
+}
+
+.prize-item p:last-child {
+  margin-bottom: 0;
+}
+
+.section-content a {
+  color: #E33D26;
+  text-decoration: none;
+}
+
+.section-content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .rules-container {
+    padding: 1rem;
+  }
+
+  .rules-content {
+    padding: 1.5rem;
+  }
+
+  .rules-header h1 {
+    font-size: 2rem;
+  }
+
+  .rules-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .section-content h3 {
+    font-size: 1.1rem;
+  }
+} 

@@ -1,0 +1,408 @@
+.search-results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.search-results-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.search-results-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.result-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+    background: #e0e0e0;
+}
+
+.filter-button.active {
+    background: #E33D26;
+    color: white;
+}
+
+.results-section {
+    margin-bottom: 3rem;
+}
+
+.results-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-grid,
+.article-grid,
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card,
+.article-card,
+.collection-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-card:hover,
+.article-card:hover,
+.collection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.recipe-image,
+.article-image,
+.collection-image {
+    position: relative;
+    padding-top: 66.67%;
+}
+
+.recipe-image img,
+.article-image img,
+.collection-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-content,
+.article-content,
+.collection-content {
+    padding: 1.5rem;
+}
+
+.recipe-content h3,
+.article-content h3,
+.collection-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.recipe-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.rating {
+    color: #E33D26;
+}
+
+.review-count {
+    color: #666;
+    margin-left: 0.25rem;
+}
+
+.recipe-author {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.article-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #f5f5f5;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.read-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.recipe-count {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.post-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.post-content {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.post-image {
+    margin: 1rem -1.5rem;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tag {
+    background: #f5f5f5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.post-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover {
+    background: #f5f5f5;
+    color: #E33D26;
+}
+
+@media (max-width: 768px) {
+    .search-results-container {
+        padding: 1rem;
+    }
+
+    .search-results-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .result-filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        padding: 0.5rem 1rem;
+    }
+
+    .recipe-grid,
+    .article-grid,
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.search-suggestion {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.related-searches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.related-search-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.related-search-item:hover {
+    background: #f0f0f0;
+    color: #E33D26;
+    transform: translateY(-2px);
+}
+
+.related-search-item .search-icon {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.related-search-item:hover .search-icon {
+    color: #E33D26;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tip-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+}
+
+.tip-card h3 {
+    color: #E33D26;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.tip-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.seasonal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.seasonal-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.seasonal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.season-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #E33D26;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.seasonal-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .tips-grid,
+    .seasonal-grid {
+        grid-template-columns: 1fr;
+    }
+} 
