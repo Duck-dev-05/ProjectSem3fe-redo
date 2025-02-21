@@ -1,0 +1,34 @@
+.footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links,
+.footer-social {
+  margin: 10px 0;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  text-decoration: underline;
+} 

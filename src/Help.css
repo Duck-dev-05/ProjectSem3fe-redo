@@ -1,0 +1,157 @@
+.help-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.help-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-header h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.help-search {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.help-search input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.help-search input:focus {
+  border-color: #E33D26;
+  outline: none;
+}
+
+.help-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 40px;
+  min-height: 600px;
+}
+
+.help-sidebar {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.help-sidebar h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.help-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-sidebar li {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.help-sidebar li:hover {
+  background-color: #f0f0f0;
+}
+
+.help-sidebar li.active {
+  background-color: #E33D26;
+  color: white;
+}
+
+.contact-support {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.contact-support h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #E33D26;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.contact-button:hover {
+  background-color: #d63522;
+}
+
+.help-main {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.faq-category {
+  margin-bottom: 30px;
+}
+
+.faq-category h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-category h3 {
+  color: #E33D26;
+  margin: 30px 0 15px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .help-content {
+    grid-template-columns: 1fr;
+  }
+
+  .help-sidebar {
+    margin-bottom: 20px;
+  }
+
+  .help-search input {
+    font-size: 14px;
+  }
+} 

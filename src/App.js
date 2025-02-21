@@ -1,79 +1,102 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import MainContent from './components/MainContent';
-import Dinners from './components/Dinners';
-import Meals from './components/Meals';
-import AllMeals from './components/AllMeals';
-import TopicMeals from './components/TopicMeals';
-import Ingredients from './components/Ingredients';
-import IngredientDetail from './components/IngredientDetail';
-import Occasions from './components/Occasions';
-import OccasionsAll from './components/OccasionsAll';
-import Cuisines from './components/Cuisines';
-import CuisinesAll from './components/CuisinesAll';
-import Footer from './components/Footer';
-import SignIn from './components/SignIn';
-import Register from './components/Register';
-import KitchenTips from './components/KitchenTips';
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import RecipeDetail from './pages/RecipeDetail';
+import SearchResults from './pages/SearchResults';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import Help from './pages/Help';
 import News from './pages/News';
-// ErrorBoundary component to catch errors in the tree.
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
+import Features from './pages/Features';
+import KitchenTips from './pages/KitchenTips';
+import AboutUs from './pages/AboutUs';
+import AddRecipe from './pages/AddRecipe';
+import PostDetail from './pages/PostDetail';
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error };
-  }
+// Import magazine-related components
+import Magazine from './pages/Magazine';
+import Featured from './pages/magazine/Featured';
+import Categories from './pages/magazine/Categories';
+import Latest from './pages/magazine/Latest';
+import Popular from './pages/magazine/Popular';
+import CategoryArticles from './pages/magazine/CategoryArticles';
 
-  componentDidCatch(error, info) {
-    console.error('Error caught in ErrorBoundary:', error, info);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="App">
-          <header className="App-header">
-            <h1>Something went wrong.</h1>
-            <p>{this.state.error && this.state.error.toString()}</p>
-          </header>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Subscribe from './pages/Subscribe';
+import Newsletter from './pages/Newsletter';
+import Sweepstakes from './pages/Sweepstakes';
+import SweepstakeDetail from './pages/SweepstakeDetail';
+import Winners from './pages/sweepstakes/Winners';
+import SweepstakeRules from './pages/sweepstakes/SweepstakeRules';
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<MainContent />} />
-          <Route path="/dinners" element={<Dinners />} />
-          <Route path="/meals" element={<Meals />} />
-          <Route path="/meals/all" element={<AllMeals />} />
-          <Route path="/meals/topic/:topic" element={<TopicMeals />} />
-          <Route path="/ingredients" element={<Ingredients />} />
-          <Route path="/ingredients/:ingredient" element={<IngredientDetail />} />
-          <Route path="/occasions" element={<Occasions />} />
-          <Route path="/occasions/all" element={<OccasionsAll />} />
-          <Route path="/Cuisines" element={<Cuisines />} />
-          <Route path="/Cuisines/all" element={<CuisinesAll />} />
-          <Route path="/KitchenTips" element={<KitchenTips />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/news" element={<News />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </ErrorBoundary>
+    <AuthProvider>
+      <div className="App">
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/kitchen-tips" element={<KitchenTips />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="/recipe/:id" element={<RecipeDetail />} />
+            
+            {/* Magazine routes */}
+            <Route path="/magazine" element={<Magazine />} />
+            <Route path="/magazine/featured" element={<Featured />} />
+            <Route path="/magazine/categories" element={<Categories />} />
+            <Route path="/magazine/latest" element={<Latest />} />
+            <Route path="/magazine/popular" element={<Popular />} />
+            <Route path="/magazine/category/:categoryName" element={<CategoryArticles />} />
+            
+            {/* Protected routes */}
+            <Route
+              path="/add-recipe"
+              element={
+                <ProtectedRoute>
+                  <AddRecipe />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/post/:id" element={<PostDetail />} />
+            <Route path="/subscribe" element={<Subscribe />} />
+            <Route path="/newsletter" element={<Newsletter />} />
+            <Route path="/sweepstakes" element={<Sweepstakes />} />
+            <Route path="/sweepstakes/:id" element={<SweepstakeDetail />} />
+            <Route path="/sweepstakes/winners" element={<Winners />} />
+            <Route path="/sweepstakes/rules" element={<SweepstakeRules />} />
+          </Routes>
+          <Footer />
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+          />
+        </Router>
+      </div>
+    </AuthProvider>
   );
 }
 
-export default App; 
+export default App;
+
+
+
