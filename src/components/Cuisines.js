@@ -12,7 +12,7 @@ function Cuisines() {
     { id: 5, title: "Japanese", image: '/images/japanese.jpg' },
     { id: 6, title: "French", image: '/images/french.jpg' },
     { id: 7, title: "Thai", image: '/images/thai.jpg' },
-    { id: 8, title: "View All", image: '/images/viewall.jpg' },
+    { id: 8, title: "View All", image: '/images/viewall.jpg', path: '/cuisines/all' },
   ];
 
   return (
@@ -22,8 +22,7 @@ function Cuisines() {
         {cuisines.map((cuisine) => (
           <Link
             key={cuisine.id}
-            // If the card is "View All", link to "/cuisines/all"; else, link to the dynamic route.
-            to={cuisine.title === "View All" ? "/cuisines/all" : `/cuisines/${encodeURIComponent(cuisine.title)}`}
+            to={`/cuisines/${encodeURIComponent(cuisine.title)}`}
             className="cuisine-card"
           >
             <img src={cuisine.image} alt={cuisine.title} />

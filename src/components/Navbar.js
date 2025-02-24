@@ -70,7 +70,7 @@ const Navbar = () => {
                         <li className="menu-item">
                             <Link to="/meals" className="menu-button">Meals</Link>
                             <div className="submenu">
-                                <Link to="/meals/breakfast-brunch">Breakfast & Brunch</Link>
+                                <Link to="/meals/breakfast">Breakfast</Link>
                                 <Link to="/meals/lunch">Lunch</Link>
                                 <Link to="/meals/healthy">Healthy</Link>
                                 <Link to="/meals/appetizers">Appetizers & Snacks</Link>

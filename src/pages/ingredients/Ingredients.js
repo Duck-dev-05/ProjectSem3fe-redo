@@ -53,7 +53,8 @@ const Ingredients = () => {
       { id: 'blueberries', title: 'Blueberries', path: '/ingredients/blueberries' },
       { id: 'broccoli', title: 'Broccoli', path: '/ingredients/broccoli' },
       { id: 'brussels-sprouts', title: 'Brussels Sprouts', path: '/ingredients/brussels-sprouts' },
-      { id: 'butter', title: 'Butter', path: '/ingredients/butter' }
+      { id: 'butter', title: 'Butter', path: '/ingredients/butter' },
+      { id: 'beets', title: 'Beets', path: '/ingredients/beets' }
     ],
     'C': [
       { id: 'cheese', title: 'Cheese', path: '/ingredients/cheese' },

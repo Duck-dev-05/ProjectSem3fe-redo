@@ -43,6 +43,12 @@ import ComfortFood from './pages/posts/ComfortFood';
 import MainDishes from './pages/posts/MainDishes';
 import SheetPanDinners from './pages/posts/SheetPanDinners';
 import AllDinnerTopics from './pages/posts/AllDinnerTopics';
+import Dinners from './pages/Dinners';
+import BreakfastBrunch from './pages/meals/BreakfastBrunch';
+import LunchBrunch from './pages/meals/LunchBrunch';
+import Ingredients from './pages/ingredients/Ingredients';
+import Cuisines from './components/Cuisines';
+import HealthyRecipes from './pages/meals/categories/HealthyRecipes';
 
 function App() {
   return (
@@ -96,6 +102,12 @@ function App() {
             <Route path="/dinners/main-dishes" element={<MainDishes />} />
             <Route path="/dinners/sheet-pan" element={<SheetPanDinners />} />
             <Route path="/dinners/all-topics" element={<AllDinnerTopics />} />
+            <Route path="/dinners" element={<Dinners />} />
+            <Route path="/meals/breakfast" element={<BreakfastBrunch />} />
+            <Route path="/meals/lunch" element={<LunchBrunch />} />
+            <Route path="/meals/healthy" element={<HealthyRecipes />} />
+            <Route path="/ingredients" element={<Ingredients />} />
+            <Route path="/cuisines" element={<Cuisines />} />
           </Routes>
           <Footer />
           <ToastContainer
