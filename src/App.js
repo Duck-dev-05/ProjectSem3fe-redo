@@ -33,6 +33,16 @@ import Sweepstakes from './pages/Sweepstakes';
 import SweepstakeDetail from './pages/SweepstakeDetail';
 import Winners from './pages/sweepstakes/Winners';
 import SweepstakeRules from './pages/sweepstakes/SweepstakeRules';
+import FiveIngredientDinners from './pages/posts/FiveIngredientDinners';
+import OnePotMeals from './pages/posts/OnePotMeals';
+import QuickEasyMeals from './pages/posts/QuickEasyMeals';
+import FamilyDinners from './pages/posts/FamilyDinners';
+import ThirtyMinuteMeals from './pages/posts/ThirtyMinuteMeals';
+import SoupStewsChili from './pages/posts/SoupStewsChili';
+import ComfortFood from './pages/posts/ComfortFood';
+import MainDishes from './pages/posts/MainDishes';
+import SheetPanDinners from './pages/posts/SheetPanDinners';
+import AllDinnerTopics from './pages/posts/AllDinnerTopics';
 
 function App() {
   return (
@@ -76,6 +86,16 @@ function App() {
             <Route path="/sweepstakes/:id" element={<SweepstakeDetail />} />
             <Route path="/sweepstakes/winners" element={<Winners />} />
             <Route path="/sweepstakes/rules" element={<SweepstakeRules />} />
+            <Route path="/dinners/5-ingredient" element={<FiveIngredientDinners />} />
+            <Route path="/dinners/one-pot" element={<OnePotMeals />} />
+            <Route path="/dinners/quick-easy" element={<QuickEasyMeals />} />
+            <Route path="/dinners/family" element={<FamilyDinners />} />
+            <Route path="/dinners/30-minute" element={<ThirtyMinuteMeals />} />
+            <Route path="/dinners/soups-stews" element={<SoupStewsChili />} />
+            <Route path="/dinners/comfort-food" element={<ComfortFood />} />
+            <Route path="/dinners/main-dishes" element={<MainDishes />} />
+            <Route path="/dinners/sheet-pan" element={<SheetPanDinners />} />
+            <Route path="/dinners/all-topics" element={<AllDinnerTopics />} />
           </Routes>
           <Footer />
           <ToastContainer

@@ -39,96 +39,17 @@ const SoupStewsChili = () => {
 
   const recipes = [
     {
-      id: 'classic-beef-stew',
+      id: 'hearty-beef-stew',
       title: 'Hearty Beef and Vegetable Stew',
       image: '/images/beef-stew.jpg',
-      rating: 4.9,
-      reviews: 5623,
-      cookTime: '2 hrs 30 mins',
+      rating: 4.5,
+      reviews: 120,
+      cookTime: '2 hours',
       difficulty: 'medium',
-      ingredients: ['beef chuck', 'potatoes', 'carrots', 'red wine', 'beef broth'],
       author: 'Chef John',
-      description: 'Rich and hearty beef stew that\'s perfect for cold weather.',
-      tags: ['beef', 'comfort-food', 'winter', 'make-ahead']
+      description: 'A classic beef stew that warms the soul.',
     },
-    {
-      id: 'chicken-noodle-soup',
-      title: 'Classic Chicken Noodle Soup',
-      image: '/images/chicken-noodle.jpg',
-      rating: 4.8,
-      reviews: 4892,
-      cookTime: '1 hr 15 mins',
-      difficulty: 'easy',
-      ingredients: ['chicken', 'egg noodles', 'carrots', 'celery', 'herbs'],
-      author: 'Chef Sarah',
-      description: 'The ultimate comfort soup that cures what ails you.',
-      tags: ['chicken', 'soup', 'comfort-food', 'classic']
-    },
-    {
-      id: 'texas-chili',
-      title: 'Texas-Style Chili Con Carne',
-      image: '/images/texas-chili.jpg',
-      rating: 4.9,
-      reviews: 3567,
-      cookTime: '3 hrs',
-      difficulty: 'medium',
-      ingredients: ['beef chunks', 'chili peppers', 'tomatoes', 'spices', 'beer'],
-      author: 'Chef Mike',
-      description: 'Award-winning Texas chili with no beans.',
-      tags: ['beef', 'spicy', 'texas', 'game-day']
-    },
-    {
-      id: 'tomato-basil-soup',
-      title: 'Creamy Tomato Basil Soup',
-      image: '/images/tomato-soup.jpg',
-      rating: 4.7,
-      reviews: 2890,
-      cookTime: '45 mins',
-      difficulty: 'easy',
-      ingredients: ['tomatoes', 'basil', 'cream', 'garlic', 'broth'],
-      author: 'Chef Maria',
-      description: 'Restaurant-quality tomato soup made simple.',
-      tags: ['vegetarian', 'soup', 'quick', 'comfort-food']
-    },
-    {
-      id: 'white-chicken-chili',
-      title: 'Creamy White Chicken Chili',
-      image: '/images/white-chili.jpg',
-      rating: 4.8,
-      reviews: 3245,
-      cookTime: '1 hr',
-      difficulty: 'easy',
-      ingredients: ['chicken', 'white beans', 'green chilies', 'cream', 'corn'],
-      author: 'Chef Lisa',
-      description: 'A lighter, creamy alternative to traditional chili.',
-      tags: ['chicken', 'chili', 'crowd-pleaser', 'make-ahead']
-    },
-    {
-      id: 'french-onion-soup',
-      title: 'Classic French Onion Soup',
-      image: '/images/french-onion.jpg',
-      rating: 4.9,
-      reviews: 2156,
-      cookTime: '1 hr 45 mins',
-      difficulty: 'medium',
-      ingredients: ['onions', 'beef broth', 'bread', 'gruyere cheese', 'wine'],
-      author: 'Chef Pierre',
-      description: 'Traditional French onion soup with melted cheese.',
-      tags: ['french', 'soup', 'vegetarian-option', 'classic']
-    },
-    {
-      id: 'vegetable-lentil-stew',
-      title: 'Hearty Vegetable Lentil Stew',
-      image: '/images/lentil-stew.jpg',
-      rating: 4.7,
-      reviews: 1892,
-      cookTime: '1 hr',
-      difficulty: 'easy',
-      ingredients: ['lentils', 'vegetables', 'tomatoes', 'spices', 'broth'],
-      author: 'Chef Rachel',
-      description: 'Healthy and filling vegetarian stew.',
-      tags: ['vegetarian', 'healthy', 'budget-friendly', 'make-ahead']
-    }
+    // Add more recipes as needed
   ];
 
   const featuredCollections = [

@@ -56,14 +56,14 @@ const Navbar = () => {
                             <div className="submenu">
                                 <Link to="/dinners/5-ingredient">5-Ingredient Dinners</Link>
                                 <Link to="/dinners/one-pot">One-Pot Meals</Link>
-                                <Link to="/dinners/quick-easy">Quick & Easy</Link>
+                                <Link to="/dinners/quick-easy">Quick & Easy Recipes</Link>
                                 <Link to="/dinners/30-minute">30-Minute Meals</Link>
                                 <Link to="/dinners/family">Family Dinners</Link>
                                 <Link to="/dinners/soups-stews">Soups, Stews & Chili</Link>
                                 <Link to="/dinners/comfort-food">Comfort Food</Link>
                                 <Link to="/dinners/main-dishes">Main Dishes</Link>
                                 <Link to="/dinners/sheet-pan">Sheet Pan Dinners</Link>
-                                <Link to="/dinners" className="view-all">View All</Link>
+                                <Link to="/dinners/all-topics" className="view-all">View All</Link>
                             </div>
                         </li>
 
@@ -141,6 +141,16 @@ const Navbar = () => {
                                 <Link to="/add-recipe">How to Add a Recipe</Link>
                             </div>
                         </li>
+
+                        {/* Remove this entire block for Services */}
+                        {/* 
+                        <li className="menu-item">
+                            <Link to="/services">Services</Link>
+                            <div className="submenu">
+                                <Link to="/services/config">Configuration</Link>
+                            </div>
+                        </li>
+                        */}
                     </ul>
                 </div>
             </nav>

@@ -96,9 +96,8 @@
 
 .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 30px;
-  padding: 20px 0;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .recipe-card {
@@ -754,4 +753,35 @@
   to {
     background-position: -200% 0;
   }
+}
+
+.topic-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.topic-card:hover {
+  transform: scale(1.05);
+}
+
+.topic-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.topic-card p {
+  color: #666;
+}
+
+/* Remove underline from links */
+.topic-card a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the inherited color */
+}
+
+.topic-card a:hover {
+  color: #E33D26; /* Change color on hover for better visibility */
 } 
