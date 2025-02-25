@@ -73,7 +73,7 @@ const Navbar = () => {
                                 <Link to="/meals/breakfast">Breakfast</Link>
                                 <Link to="/meals/lunch">Lunch</Link>
                                 <Link to="/meals/healthy">Healthy</Link>
-                                <Link to="/meals/appetizers">Appetizers & Snacks</Link>
+                                <Link to="/appetizers">Appetizers</Link>
                                 <Link to="/meals/salads">Salads</Link>
                                 <Link to="/meals/side-dishes">Side Dishes</Link>
                                 <Link to="/meals/soups">Soups</Link>

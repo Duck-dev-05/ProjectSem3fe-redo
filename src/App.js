@@ -14,6 +14,9 @@ import KitchenTips from './pages/KitchenTips';
 import AboutUs from './pages/AboutUs';
 import AddRecipe from './pages/AddRecipe';
 import PostDetail from './pages/PostDetail';
+import Appetizers from './pages/Appetizers';
+import Dinners from './pages/Dinners';
+import DinnerDetail from './pages/DinnerDetail';
 
 // Import magazine-related components
 import Magazine from './pages/Magazine';
@@ -43,7 +46,6 @@ import ComfortFood from './pages/posts/ComfortFood';
 import MainDishes from './pages/posts/MainDishes';
 import SheetPanDinners from './pages/posts/SheetPanDinners';
 import AllDinnerTopics from './pages/posts/AllDinnerTopics';
-import Dinners from './pages/Dinners';
 import BreakfastBrunch from './pages/meals/BreakfastBrunch';
 import LunchBrunch from './pages/meals/LunchBrunch';
 import Ingredients from './pages/ingredients/Ingredients';
@@ -58,6 +60,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/appetizers" element={<Appetizers />} />
+            <Route path="/appetizers/:id" element={<Appetizers />} />
             <Route path="/news" element={<News />} />
             <Route path="/features" element={<Features />} />
             <Route path="/kitchen-tips" element={<KitchenTips />} />
@@ -76,7 +80,7 @@ function App() {
             <Route path="/magazine/popular" element={<Popular />} />
             <Route path="/magazine/category/:categoryName" element={<CategoryArticles />} />
             
-            {/* Protected routes */}
+          
             <Route
               path="/add-recipe"
               element={
@@ -103,6 +107,7 @@ function App() {
             <Route path="/dinners/sheet-pan" element={<SheetPanDinners />} />
             <Route path="/dinners/all-topics" element={<AllDinnerTopics />} />
             <Route path="/dinners" element={<Dinners />} />
+            <Route path="/dinners/:id" element={<DinnerDetail />} />
             <Route path="/meals/breakfast" element={<BreakfastBrunch />} />
             <Route path="/meals/lunch" element={<LunchBrunch />} />
             <Route path="/meals/healthy" element={<HealthyRecipes />} />

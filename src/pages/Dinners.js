@@ -8,13 +8,13 @@ const Dinners = () => {
       id: '5-ingredient',
       title: '5-Ingredient Dinners',
       image: '/images/5-ingredient-dinners.jpg',
-      path: '/category/dinners/5-ingredient'
+      path: '/dinners/5-ingredient'
     },
     {
       id: 'one-pot',
       title: 'One-Pot Meals',
       image: '/images/one-pot-meals.jpg',
-      path: '/category/dinners/one-pot'
+      path: '/dinners/one-pot'
     },
     {
       id: 'quick-easy',
@@ -61,13 +61,18 @@ const Dinners = () => {
   ];
 
   return (
-    <div className="page-container">
-      <div className="page-header">
-        <h1>Dinner Recipes</h1>
-        <p>Find the perfect dinner recipe for any night of the week</p>
-      </div>
-      
-      <div className="category-grid">
+    <div className="dinners-page">
+      {/* Hero Banner Section */}
+      <section className="dinners-hero">
+        <h1>Dinners</h1>
+        <p>Inspiration for your evening meals</p>
+      </section>
+
+      {/* Dinner Categories Grid */}
+      <section className="dinner-categories">
+        <Link to="/appetizers" className="category-card">
+          <h2>Appetizers</h2>
+        </Link>
         {dinnerCategories.map(category => (
           <Link 
             to={category.path}
@@ -83,7 +88,7 @@ const Dinners = () => {
             </div>
           </Link>
         ))}
-      </div>
+      </section>
     </div>
   );
 };

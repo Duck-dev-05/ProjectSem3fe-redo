@@ -1,0 +1,74 @@
+.appetizers-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.appetizers-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.appetizers-description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.appetizer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-card h2 {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.recipe-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.appetizers-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3rem; /* Increased font size */
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase; /* Make the title uppercase */
+  border-bottom: 2px solid #e63946; /* Add a bottom border for emphasis */
+  display: inline-block; /* Center the border with the title */
+  padding-bottom: 10px; /* Add some space below the title */
+}
+
+.appetizer-detail {
+  margin-top: 20px;
+  text-align: center;
+} 
