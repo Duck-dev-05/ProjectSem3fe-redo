@@ -29,16 +29,16 @@ const KitchenTips = () => {
             image: '/images/kitchen-tips/grilling.jpg'
         },
         {
-            id: 'cooking-basics',
-            title: 'Cooking Basics',
-            description: 'Essential techniques every home cook should know',
-            image: '/images/kitchen-tips/cooking-basics.jpg'
-        },
-        {
             id: 'substitutions',
             title: 'Ingredient Substitutions',
             description: 'Common substitutions to save your recipe in a pinch',
             image: '/images/kitchen-tips/substitutions.jpg'
+        },
+        {
+            id: 'equipment',
+            title: 'Cooking Equipment',
+            description: 'Essential tools and equipment for every kitchen',
+            image: '/images/kitchen-tips/equipment.jpg'
         }
     ];
 
@@ -48,7 +48,6 @@ const KitchenTips = () => {
                 <h1>Kitchen Tips & Techniques</h1>
                 <p>Master essential cooking skills and get expert advice for better meals</p>
             </header>
-
             <div className="tips-grid">
                 {tipCategories.map((category) => (
                     <Link 

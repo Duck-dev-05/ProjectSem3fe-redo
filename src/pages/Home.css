@@ -1,13 +1,13 @@
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
 }
 
 .hero-section {
   text-align: center;
-  padding: 4rem 2rem;
-  background: #f8f8f8;
+  padding: 20px;
+  background-color: #f8f9fa;
   border-radius: 12px;
   margin-bottom: 3rem;
 }
@@ -24,6 +24,7 @@
 }
 
 .featured-recipes, .categories {
+  margin-top: 20px;
   margin-bottom: 3rem;
 }
 

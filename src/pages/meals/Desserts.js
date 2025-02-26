@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Desserts.css'; // Ensure this matches the file name
 
@@ -37,30 +37,18 @@ const Desserts = () => {
   const [sortBy, setSortBy] = useState('popular');
   const [activeDifficulty, setActiveDifficulty] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [recipes, setRecipes] = useState([]);
 
-  const recipes = [
-    {
-      id: 'tiramisu',
-      title: 'Tiramisu',
-      image: '/images/desserts/tiramisu.jpg',
-      rating: 4.7,
-      reviews: 800,
-      cookTime: '20 mins',
-      difficulty: 'medium',
-      author: 'Chef Maria',
-    },
-    {
-      id: 'pavlova',
-      title: 'Pavlova',
-      image: '/images/desserts/pavlova.jpg',
-      rating: 4.6,
-      reviews: 600,
-      cookTime: '60 mins',
-      difficulty: 'hard',
-      author: 'Chef Lisa',
-    },
-    // Add more dessert recipes as needed
-  ];
+  useEffect(() => {
+    // Simulate fetching data
+    const fetchData = async () => {
+      const response = await fetch('/api/desserts'); // Adjust the API endpoint as needed
+      const data = await response.json();
+      setRecipes(data);
+    };
+
+    fetchData();
+  }, []);
 
   const allTags = [...new Set(recipes.flatMap(recipe => recipe.tags || []))];
 

@@ -3,6 +3,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { AuthProvider } from './context/AuthContext';
+// Import Instant Pot component
+import InstantPot from './pages/kitchen-tips/InstantPot';
+// Import Air Fryer component
+import AirFryer from './pages/kitchen-tips/AirFryer';
+// Import Slow Cooker component
+import SlowCooker from './pages/kitchen-tips/SlowCooker';
+// Import Grilling component
+import Grilling from './pages/kitchen-tips/Grilling';
+// Import Ingredient Substitutions component
+import IngredientSubstitutions from './pages/meals/categories/IngredientSubstitutions';
+import CookingEquipment from './pages/kitchen-tips/CookingEquipment';
+import CookingBasics from './pages/kitchen-tips/CookingBasics';
+
 
 // Import pages
 import Home from "./pages/Home";
@@ -57,7 +70,9 @@ import DrinkBrunch from './pages/DrinkBrunch';
 import Meals from './pages/meals/Meals';
 import AllMeals from './pages/meals/AllMeals';
 import DessertPage from './pages/meals/DessertPage';
-
+import IngredientsPage from './pages/IngredientsPage';
+import IngredientDetailPage from './pages/IngredientDetailPage';
+import RecipeDetailPage from './pages/RecipeDetailPage';
 
 function App() {
   return (
@@ -98,6 +113,13 @@ function App() {
             {/* Other Routes */}
             <Route path="/about" element={<AboutUs />} />
             <Route path="/kitchen-tips" element={<KitchenTips />} />
+            <Route path="/kitchen-tips/instant-pot" element={<InstantPot />} />
+            <Route path="/kitchen-tips/air-fryer" element={<AirFryer />} />
+            <Route path="/kitchen-tips/slow-cooker" element={<SlowCooker />} />
+            <Route path="/kitchen-tips/grilling" element={<Grilling />} />
+            <Route path="/kitchen-tips/equipment" element={<CookingEquipment />} />
+            <Route path="/kitchen-tips/cooking-basics" element={<CookingBasics />} />
+            <Route path="/kitchen-tips/ingredient-substitutions" element={<IngredientSubstitutions />} />
             <Route path="/news" element={<News />} />
             <Route path="/features" element={<Features />} />
             <Route path="/add-recipe" element={<AddRecipe />} />
@@ -121,6 +143,9 @@ function App() {
             <Route path="/meals/all" element={<AllMeals />} />
             <Route path="/meals" element={<Meals />} />
             <Route path="/meals/dessert-page" element={<DessertPage />} />
+            <Route path="/ingredients" element={<IngredientsPage />} />
+            <Route path="/ingredients/:ingredient" element={<IngredientDetailPage />} />
+            <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
           </Routes>
           <Footer />
         </Router>

@@ -1,0 +1,90 @@
+.ingredients-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+}
+
+.alphabet-navigation {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.alphabet-link {
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.alphabet-link:hover {
+    border-color: #007bff;
+    background-color: #e9ecef;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.ingredient-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-card:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ingredient-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.ingredient-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    transition: color 0.3s;
+}
+
+.ingredient-card:hover .ingredient-description {
+    color: #333;
+} 

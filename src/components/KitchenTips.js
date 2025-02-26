@@ -1,10 +1,11 @@
 import React from 'react';
 import './KitchenTips.css';
+import { Link } from 'react-router-dom';
 
 function KitchenTips() {
   // List of tip categories inspired by Allrecipes Kitchen Tips
   const tipsCategories = [
-    { id: 1, title: "Instant Pot", description: "Find tips and recipes for your Instant Pot.", image: '/images/instant-pot.jpg' },
+    { id: 1, title: "Instant Pot", description: "Find tips and recipes for your Instant Pot.", image: '/images/instant-pot.jpg', path: '/meals/instant-pot' },
     { id: 2, title: "Air Fryer", description: "Discover creative air fryer recipes and hacks.", image: '/images/air-fryer.jpg' },
     { id: 3, title: "Slow Cooker", description: "Cook hearty meals with these slow cooker tips.", image: '/images/slow-cooker.jpg' },
     { id: 4, title: "Our Favorite Products", description: "Check out top kitchen gadgets and products.", image: '/images/favorite-products.jpg' },
@@ -23,7 +24,11 @@ function KitchenTips() {
             <img src={category.image} alt={category.title} />
             <h2>{category.title}</h2>
             <p>{category.description}</p>
-            <a href={`/kitchen-tips/${category.title.toLowerCase().replace(/\s+/g, '-')}`}>Explore</a>
+            {category.path ? (
+              <Link to={category.path}>Explore</Link>
+            ) : (
+              <a href={`/kitchen-tips/${category.title.toLowerCase().replace(/\s+/g, '-')}`}>Explore</a>
+            )}
           </div>
         ))}
       </div>

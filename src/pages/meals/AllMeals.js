@@ -13,6 +13,7 @@ const AllMeals = () => {
     { id: 'bread', title: 'Bread', image: '/images/bread.jpg' },
     { id: 'drinks', title: 'Drinks', image: '/images/drinks.jpg' },
     { id: 'desserts', title: 'Desserts', image: '/images/desserts.jpg' },
+    { id: 'instant-pot', title: 'Instant Pot', image: '/images/instant-pot.jpg' },
   ];
 
   return (

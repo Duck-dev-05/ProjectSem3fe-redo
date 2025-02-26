@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './DessertPage.css'; // Ensure you have this CSS file for styling
+import './ChickenPage.css'; // Ensure this import is correct
 
 const RecipeCard = ({ recipe }) => (
   <Link to={`/recipe/${recipe.id}`} className="recipe-card allrecipes-style">
@@ -24,55 +24,66 @@ const RecipeCard = ({ recipe }) => (
             <i className="fas fa-chart-line"></i> {recipe.difficulty}
           </span>
         </div>
+        <div className="author-byline">
+          By <span className="author-name">{recipe.author}</span>
+        </div>
       </div>
     </div>
   </Link>
 );
 
-const DessertPage = () => {
+const ChickenPage = () => {
   const [activeTag, setActiveTag] = useState(null);
   const [sortBy, setSortBy] = useState('popular');
   const [activeDifficulty, setActiveDifficulty] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
 
-  const dessertRecipes = [
+  const chickenRecipes = [
     {
-      id: 1,
-      title: 'Chocolate Cake',
-      description: 'A rich and moist chocolate cake.',
-      image: '/images/desserts/chocolate-cake.jpg',
-      rating: 4.5,
-      reviews: 150,
+      id: 'grilled-chicken',
+      title: 'Grilled Chicken',
+      image: '/images/chicken/grilled-chicken.jpg',
+      rating: 4.8,
+      reviews: 1200,
       cookTime: '30 mins',
       difficulty: 'easy',
+      author: 'Chef Mike',
+      description: 'Juicy grilled chicken with a smoky flavor.',
+      tags: ['chicken', 'grilled', 'easy']
     },
     {
-      id: 2,
-      title: 'Apple Pie',
-      description: 'Classic apple pie with a flaky crust.',
-      image: '/images/desserts/apple-pie.jpg',
+      id: 'chicken-curry',
+      title: 'Chicken Curry',
+      image: '/images/chicken/chicken-curry.jpg',
       rating: 4.7,
-      reviews: 200,
+      reviews: 800,
       cookTime: '45 mins',
       difficulty: 'medium',
+      author: 'Chef Lisa',
+      description: 'Spicy chicken curry with aromatic spices.',
+      tags: ['chicken', 'curry', 'spicy']
     },
     {
-      id: 3,
-      title: 'Cheesecake',
-      description: 'Creamy cheesecake with a graham cracker crust.',
-      image: '/images/desserts/cheesecake.jpg',
-      rating: 4.8,
-      reviews: 300,
-      cookTime: '60 mins',
-      difficulty: 'hard',
+      id: 'chicken-salad',
+      title: 'Chicken Salad',
+      image: '/images/chicken/chicken-salad.jpg',
+      rating: 4.6,
+      reviews: 600,
+      cookTime: '15 mins',
+      difficulty: 'easy',
+      author: 'Chef Anna',
+      description: 'Fresh chicken salad with a tangy dressing.',
+      tags: ['chicken', 'salad', 'quick']
     },
-    // Add more dessert recipes as needed
+    // Add more chicken recipes as needed
   ];
 
-  const filteredRecipes = dessertRecipes.filter(recipe => {
-    const matchesSearch = recipe.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDifficulty = activeDifficulty === 'all' || recipe.difficulty === activeDifficulty;
-    return matchesSearch && matchesDifficulty;
+  // Filter and sort logic
+  const allTags = [...new Set(chickenRecipes.flatMap(recipe => recipe.tags))];
+
+  const filteredRecipes = chickenRecipes.filter(recipe => {
+    const matchesTag = !activeTag || recipe.tags.includes(activeTag);
+    const matchesDifficulty = activeDifficulty === 'all' || recipe.difficulty === activeDifficulty.toLowerCase();
+    return matchesTag && matchesDifficulty;
   });
 
   const sortedRecipes = [...filteredRecipes].sort((a, b) => {
@@ -91,22 +102,15 @@ const DessertPage = () => {
     <div className="post-container allrecipes-layout">
       <div className="post-header">
         <div className="header-content">
-          <h1>Dessert Recipes</h1>
+          <h1>Chicken Recipes</h1>
           <p className="header-description">
-            Discover a variety of delicious dessert recipes that are perfect for any occasion.
+            Discover a variety of delicious chicken recipes. From grilled to baked, find the perfect dish for any occasion.
           </p>
         </div>
       </div>
 
       <div className="recipe-filters">
-        <h2>Explore Dessert Recipes</h2>
-        <input
-          type="text"
-          placeholder="Search recipes..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-bar"
-        />
+        <h2>Explore Chicken Recipes</h2>
         <div className="filter-options">
           <select 
             className="sort-select"
@@ -130,6 +134,21 @@ const DessertPage = () => {
             ))}
           </div>
         </div>
+
+        <div className="popular-searches">
+          <h3>Popular Categories:</h3>
+          <div className="search-tags">
+            {allTags.map(tag => (
+              <button
+                key={tag}
+                className={`search-tag ${activeTag === tag ? 'active' : ''}`}
+                onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="recipes-grid allrecipes-grid">
@@ -149,7 +168,6 @@ const DessertPage = () => {
                   setActiveTag(null);
                   setActiveDifficulty('all');
                   setSortBy('popular');
-                  setSearchTerm('');
                 }}
               >
                 Clear All Filters
@@ -162,4 +180,4 @@ const DessertPage = () => {
   );
 };
 
-export default DessertPage; 
+export default ChickenPage; 

@@ -56,6 +56,10 @@ function Meals() {
           <img src="/images/desserts.jpg" alt="Desserts" />
           <h2>Desserts</h2>
         </div>
+        <div className="category-card">
+          <img src="/images/instant-pot.jpg" alt="Instant Pot" />
+          <h2>Instant Pot</h2>
+        </div>
         {/* "View All" Link */}
         <Link to="/meals/all" className="category-card view-all">
           <h2>View All</h2>

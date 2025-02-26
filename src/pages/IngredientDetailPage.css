@@ -1,0 +1,101 @@
+.ingredient-detail-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 1200px; /* Limit the width for better readability */
+    margin: auto; /* Center the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333; /* Darker text for better contrast */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555; /* Slightly lighter text */
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Larger font for better readability */
+}
+
+.filter-options {
+    margin-bottom: 20px;
+}
+
+.filter-pill {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.filter-pill:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.filter-pill.active {
+    background-color: #0056b3; /* Active button color */
+}
+
+.dinner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.dinner-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.dinner-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+.dinner-link {
+    text-decoration: none;
+    color: #333; /* Dark text for better contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.dinner-image {
+    width: 100%; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Divider between image and text */
+}
+
+.dinner-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.dinner-card p {
+    font-size: 14px;
+    color: #777; /* Lighter text for descriptions */
+}
+
+.dinner-list a:hover {
+    text-decoration: underline;
+} 

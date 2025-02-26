@@ -78,36 +78,25 @@ const Navbar = () => {
                                 <Link to="/meals/soups">Soups</Link>
                                 <Link to="/meals/bread">Bread</Link>
                                 <Link to="/meals/drink">Drinks</Link>
-                                <Link to="/meals/desserts">Desserts</Link>
-                                <Link to="/meals/dessert-page" className="view-all">View Dessert Page</Link>
+                                <Link to="/meals/dessert-page">Dessert</Link>
                                 <Link to="/meals/all" className="view-all">View All</Link>
                             </div>
                         </li>
 
                         <li className="menu-item">
                             <Link to="/ingredients" className="menu-button">Ingredients</Link>
-                            <div className="submenu">
-                                <Link to="/ingredients/chicken">Chicken</Link>
-                                <Link to="/ingredients/beef">Beef</Link>
-                                <Link to="/ingredients/pork">Pork</Link>
-                                <Link to="/ingredients/seafood">Seafood</Link>
-                                <Link to="/ingredients/pasta">Pasta</Link>
-                                <Link to="/ingredients/fruits">Fruits</Link>
-                                <Link to="/ingredients/vegetables">Vegetables</Link>
-                                <Link to="/ingredients" className="view-all">View All</Link>
-                            </div>
                         </li>
 
                         <li className="menu-item">
                             <Link to="/kitchen-tips" className="menu-button">Kitchen Tips</Link>
                             <div className="submenu">
+                                <Link to="/kitchen-tips/view-all" className="view-all">View All Kitchen Tips</Link>
                                 <Link to="/kitchen-tips/instant-pot">Instant Pot</Link>
                                 <Link to="/kitchen-tips/air-fryer">Air Fryer</Link>
                                 <Link to="/kitchen-tips/slow-cooker">Slow Cooker</Link>
                                 <Link to="/kitchen-tips/grilling">BBQ & Grilling</Link>
-                                <Link to="/kitchen-tips/cooking-equipment">Cooking by Equipment</Link>
-                                <Link to="/kitchen-tips/substitutions">Ingredient Substitutions</Link>
-                                <Link to="/kitchen-tips" className="view-all">View All</Link>
+                                <Link to="/kitchen-tips/equipment">Cooking Equipment</Link>
+                                <Link to="/kitchen-tips/cooking-basics">Cooking Basics</Link>
                             </div>
                         </li>
 
