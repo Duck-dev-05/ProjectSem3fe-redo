@@ -1,0 +1,57 @@
+/* General body styles */
+body {
+    background-color: #F5E1A4; /* Light sandy background */
+    color: #4A3C2A; /* Dark brown text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #D9B68C; /* Warm beige */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Navigation styles */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #4A3C2A;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Card styles for brunch items */
+.card {
+    background-color: #FFF3E0; /* Light peach */
+    border: 1px solid #D9B68C;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #D9B68C; /* Warm beige */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} 

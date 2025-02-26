@@ -54,10 +54,7 @@ import SheetPanDinners from './pages/posts/SheetPanDinners';
 import AllDinnerTopics from './pages/posts/AllDinnerTopics';
 import AppetizersPage from './pages/meals/AppetizersPage';
 import DrinkBrunch from './pages/DrinkBrunch';
-import Meals from './pages/meals/Meals';
-import AllMeals from './pages/meals/AllMeals';
-import DessertPage from './pages/meals/DessertPage';
-
+import DessertPage from './pages/DessertPage';
 
 function App() {
   return (
@@ -84,6 +81,7 @@ function App() {
             <Route path="/meals/appetizers" element={<AppetizersPage />} />
             <Route path="/meals/bread" element={<BreadBrunch />} />
             <Route path="/meals/drink" element={<DrinkBrunch />} />
+            <Route path="/meals/dessert" element={<DessertPage />} />
             <Route path="/dinners" element={<Dinners />} />
             <Route path="/dinners/:id" element={<DinnerDetail />} />
 
@@ -118,9 +116,6 @@ function App() {
             <Route path="/dinners/main-dishes" element={<MainDishes />} />
             <Route path="/dinners/sheet-pan" element={<SheetPanDinners />} />
             <Route path="/dinners/all-topics" element={<AllDinnerTopics />} />
-            <Route path="/meals/all" element={<AllMeals />} />
-            <Route path="/meals" element={<Meals />} />
-            <Route path="/meals/dessert-page" element={<DessertPage />} />
           </Routes>
           <Footer />
         </Router>
@@ -129,4 +124,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 

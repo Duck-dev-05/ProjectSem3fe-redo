@@ -1,0 +1,30 @@
+.all-meals-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.meal-card {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.meal-card:hover {
+  transform: scale(1.05);
+}
+
+.meal-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+} 

@@ -214,6 +214,10 @@ const Meals = () => {
           </Link>
         </div>
       </div>
+
+      <div className="view-all-link">
+        <Link to="/meals/all">View All</Link>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,39 @@
+.navbar {
+    /* existing styles... */
+    background-color: initial; /* Reset background color */
+    color: initial; /* Reset text color */
+    transition: none; /* Remove transition */
+    position: relative; /* Ensure positioning context for submenu */
+}
+
+.navbar a {
+    color: initial; /* Reset link color */
+    padding: 14px 20px; /* Add padding for better click area */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+    background-color: initial; /* Reset hover background */
+}
+
+.submenu {
+    display: none; /* Initially hide submenu */
+    position: absolute; /* Position submenu absolutely */
+    z-index: 1000; /* Ensure submenu is above other elements */
+    background-color: #333; /* Background color for submenu */
+    min-width: 150px; /* Set a minimum width for the submenu */
+}
+
+.navbar .menu-item:hover .submenu {
+    display: block; /* Show submenu on hover of the menu item */
+}
+
+.submenu a {
+    color: white; /* Set submenu link color */
+    padding: 10px; /* Padding for submenu links */
+    display: block; /* Make submenu links block elements */
+}
+
+.submenu a:hover {
+    background-color: #575757; /* Change background on hover */
+} 

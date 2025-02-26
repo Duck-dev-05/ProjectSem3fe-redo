@@ -73,13 +73,14 @@ const Navbar = () => {
                                 <Link to="/meals/breakfast">Breakfast</Link>
                                 <Link to="/meals/lunch">Lunch</Link>
                                 <Link to="/meals/healthy">Healthy</Link>
-                                <Link to="/salads">Salads</Link>
-                                <Link to="/appetizers">Appetizers</Link>
-                                <Link to="/soups">Soups</Link>
+                                <Link to="/meals/appetizers">Appetizers</Link>
+                                <Link to="/meals/salads">Salads</Link>
+                                <Link to="/meals/soups">Soups</Link>
                                 <Link to="/meals/bread">Bread</Link>
-                                <Link to="/meals/drinks">Drinks</Link>
+                                <Link to="/meals/drink">Drinks</Link>
                                 <Link to="/meals/desserts">Desserts</Link>
-                                <Link to="/meals" className="view-all">View All</Link>
+                                <Link to="/meals/dessert-page" className="view-all">View Dessert Page</Link>
+                                <Link to="/meals/all" className="view-all">View All</Link>
                             </div>
                         </li>
 
