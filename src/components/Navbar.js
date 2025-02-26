@@ -90,13 +90,13 @@ const Navbar = () => {
                         <li className="menu-item">
                             <Link to="/kitchen-tips" className="menu-button">Kitchen Tips</Link>
                             <div className="submenu">
-                                <Link to="/kitchen-tips/view-all" className="view-all">View All Kitchen Tips</Link>
                                 <Link to="/kitchen-tips/instant-pot">Instant Pot</Link>
                                 <Link to="/kitchen-tips/air-fryer">Air Fryer</Link>
                                 <Link to="/kitchen-tips/slow-cooker">Slow Cooker</Link>
                                 <Link to="/kitchen-tips/grilling">BBQ & Grilling</Link>
                                 <Link to="/kitchen-tips/equipment">Cooking Equipment</Link>
                                 <Link to="/kitchen-tips/cooking-basics">Cooking Basics</Link>
+                                <Link to="/kitchen-tips/view-all" className="view-all">View All</Link>
                             </div>
                         </li>
 
